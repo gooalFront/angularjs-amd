@@ -18,7 +18,7 @@ require.config({
 /**
  * 1.定义模块路径 angular angular-ui-router angularAMD ngLoda
  * 2.重新定义每个非amd规范模块的引用对象 shim
- * 3.定义当前模块以来
+ * 3.定义当前模块依赖
  * 
  * 
  * 整个模块加载前会依赖 app.js 默认路径跟mainjs 同级
