@@ -3,13 +3,17 @@ require.config({
         "angular": '/libs/angular/angular',
         "angular-ui-router": '/libs/angular-ui-router/release/angular-ui-router',
         "angularAMD": "/libs/angularAMD/angularAMD",
-        "ngload": "/libs/angularAMD/ngload"
+        "ngload": "/libs/angularAMD/ngload",
+        "mock":"/libs/mockjs/dist/mock"
     },
     shim: {
         "angular": { exports: "angular" },
         "angular-ui-router": ['angular'],
         "angularAMD": ["angular"],
-        "ngload": ["angularAMD"]
+        "ngload": ["angularAMD"],
+        "mock":{
+            exports:"mock"
+        }
     },
     deps: ['app']
 })
