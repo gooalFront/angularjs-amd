@@ -1,0 +1,25 @@
+{
+  "name": "angularjs-amd",
+  "homepage": "https://github.com/YeahPotato/angularjs-amd",
+  "authors": [
+    "yangwd <yangwd@gooalgene.com>"
+  ],
+  "description": "",
+  "main": "",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "libs",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angularAMD": "^0.2.1",
+    "angular": "1.4.6",
+    "jquery": "1.11.1",
+    "angular-ui-router": "^1.0.4",
+    "mockjs": "^1.0.0"
+  }
+}
