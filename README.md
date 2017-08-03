@@ -1,4 +1,4 @@
-# AngularAmd
+# AngularAMD
 
 
  * angularjs + require +angularAMD 实现angular的按需加载
@@ -79,6 +79,34 @@ define([
     <a ui-sref="about">{{title}}</a>
 </div>
 
+```
+
+### 4.service
+//toolService.js
+```javascript
+define(['app'],function(app){
+    app.service('myService',function(){
+        this.greeting=function(name){
+            console.log('hello:'+name);
+        }
+    })
+})
+
+```
+//main.js(定义路径)
+```javascript
+        "toolService": "./gwas-single/src/script/service/toolService"
+```
+
+//homeController.js
+```javascript
+define(['app','toolService'],function(app){
+    app.controller('HomeCtr',['$scope','myService',homeFn]);
+    function homeFn($scope,myService){
+        myService.greeting('joke');
+        //hello:joke
+    }
+})
 ```
 
 
