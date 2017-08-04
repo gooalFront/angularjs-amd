@@ -6,8 +6,12 @@ require.config({
         "ngload": "/libs/angularAMD/ngload",
         "mock": "/libs/mockjs/dist/mock",
 
-        "toolService": "./gwas-single/src/script/service/toolService"
+        "toolService": "./gwas-single/src/script/service/toolService",
+
+        //config
+        "config": "./config"
     },
+    urlArgs: "version=" + new Date().getTime(),
     shim: {
         "angular": { exports: "angular" },
         "angular-ui-router": ['angular'],

@@ -1,22 +1,23 @@
 define([
     'angularAMD',
+    'config',
     'angular-ui-router'
-], function(angularAMD) {
+], function(angularAMD, config) {
     var app = angular.module('app', ['ui.router']);
-
+    console.log(config)
     app.config(function($stateProvider, $urlRouterProvider) {
         $urlRouterProvider.otherwise('/home');
 
         $stateProvider.state('home', angularAMD.route({
                 url: "/home",
                 templateUrl: "/gwas-single/view/home.html",
-                controller: "HomeCtr",
+                controller: "homeController",
                 controllerUrl: "/gwas-single/view/homeController.js"
             }))
             .state('about', angularAMD.route({
                 url: "/about",
                 templateUrl: "./view/about.html",
-                controller: "AboutCtr",
+                controller: "aboutController",
                 controllerUrl: "./view/aboutController.js"
             }))
     })

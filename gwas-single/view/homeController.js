@@ -2,11 +2,12 @@ define([
     'app',
     "toolService"
 ], function(app) {
-    app.controller('HomeCtr', ['$scope', 'myService', homefn])
+    app.controller('homeController', homecontroller)
+    homecontroller.$inject = ['$scope', '$rootScope', 'myService'];
 
-    function homefn($scope, myService) {
+    function homecontroller($scope, $rootScope, myService) {
+        console.log($rootScope);
         myService.greeting('joke');
-
         $scope.title = 123;
     }
 });
